@@ -1,0 +1,43 @@
+.app {
+  padding: 15px;
+  .content {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .app {
+    flex-direction: column;
+    .content {
+      .action {
+        position: fixed;
+        top: 15;
+      }
+      .movie {
+        margin-top: 10px;
+      }
+      .error {
+        margin-top: 20px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1023px) {
+  .app {
+    .content {
+      flex-direction: column-reverse;
+      .movie {
+        margin-bottom: 10px;
+      }
+      .error {
+        margin-bottom: 20px;
+      }
+      .action {
+        position: fixed;
+        bottom: 15px;
+      }
+    }
+  }
+}
